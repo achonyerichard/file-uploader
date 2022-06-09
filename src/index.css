@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hero{
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+svg path {
+  fill: white;
+}
+.card-bg{
+  background-color: rgb(255, 255, 255)
+}
+.card-cursor{
+  cursor: auto;
+}
