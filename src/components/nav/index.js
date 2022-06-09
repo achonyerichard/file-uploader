@@ -17,10 +17,10 @@ function classNames(...classes) {
 
 export default function Nav() {
   return (
-    <Disclosure as="nav" className="hero border-b">
+    <Disclosure as="nav" className="hero border-b z-20 top-0 sticky">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -53,7 +53,7 @@ export default function Nav() {
                       >
                         <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
                       </svg>
-                     
+
                       <p className="text-[color:white]  text-xl font-bold">
                         TVUS
                       </p>
@@ -104,8 +104,8 @@ export default function Nav() {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      ? " text-white"
+                      : "text-gray-300  hover:text-white",
                     "block px-3 py-2 text-[color:white] rounded-md text-base font-medium "
                   )}
                   aria-current={item.current ? "page" : undefined}

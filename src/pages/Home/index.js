@@ -5,19 +5,16 @@ import Nav from "../../components/nav";
 import Card from "../../components/cards";
 import { useState } from "react";
 
-
 const Home = () => {
+  const [fileUrl, setFileUrl] = useState("");
+  const [isJpeg, setIsJpeg] = useState(false);
+  const [isMp, setIsMp] = useState(false);
 
-const [fileUrl,setFileUrl] = useState("")
-const [isJpeg, setIsJpeg] = useState(false)
-const [isMp,setIsMp]=useState(false)
-
-
-const onClear=()=>{
-  console.log('hi');
-  setIsJpeg(false)
-  setIsMp(false)
-}
+  const onClear = () => {
+    console.log("hi");
+    setIsJpeg(false);
+    setIsMp(false);
+  };
 
   const uploadFile = async (e) => {
     const file = e.target.files[0];
@@ -31,8 +28,8 @@ const onClear=()=>{
       setIsJpeg(true);
       console.log(isJpeg);
     }
-    if(file.type ==="video/mp4"){
-      setIsMp(true)
+    if (file.type === "video/mp4") {
+      setIsMp(true);
     }
     const baseCon = await baseConverter(file);
     console.log(baseCon);
@@ -60,12 +57,12 @@ const onClear=()=>{
       <Nav />
       <Hero />
       <Card />
-      <div className="mt-8">
+      <div className="mt-8 ">
         <div className=" text-2xl md:text-4xl font-bold pb-10 flex justify-center text-gray-500">
           Upload A File
         </div>
         <div className="flex justify-center  mb-6">
-          <div className="rounded-lg shadow-xl bg-gray-50 lg:w-1/2 border border-pink-500">
+          <div className="rounded-lg shadow-xl bg-gray-50 lg:w-1/2 border border-pink-500 ">
             <div className="m-4">
               <label className="inline-block mb-2 text-gray-500">
                 Upload File(jpg,png,svg,jpeg)
